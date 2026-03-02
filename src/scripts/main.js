@@ -3,6 +3,15 @@
 // write code here
 
 const tree = document.querySelector('.tree');
+
+for (const li of tree.querySelectorAll('li')) {
+  const span = document.createElement('span');
+
+  li.prepend(span);
+
+  span.append(span.nextSibling);
+}
+
 const lists = tree.querySelectorAll('ul');
 
 lists.forEach((ul) => {
